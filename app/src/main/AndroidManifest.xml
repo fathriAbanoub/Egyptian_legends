@@ -63,6 +63,36 @@
         </activity>
 
         <activity
+            android:name=".Scene9"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".Scene10"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".Scene11"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".Scene12"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".Scene13"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".Scene14"
+            android:exported="true">
+        </activity>
+
+        <activity
             android:name=".Ending"
             android:exported="true">
         </activity>

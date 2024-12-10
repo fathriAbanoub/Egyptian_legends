@@ -17,7 +17,6 @@ public class Ending extends AppCompatActivity {
         playAgainButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Implement the logic for playing again
                 Intent intent = new Intent(Ending.this, TitleScreen.class);
                 startActivity(intent);
             }

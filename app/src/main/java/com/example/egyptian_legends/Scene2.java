@@ -1,6 +1,7 @@
 package com.example.egyptian_legends;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,10 +9,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Scene2 extends AppCompatActivity {
 
+    private MediaPlayer mediaPlayer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scene2);
+
+        // Initialize and play the sound
+        mediaPlayer = MediaPlayer.create(this, R.raw.chamber_scroll);
+        mediaPlayer.start();
 
         boolean examinedHieroglyphs = getIntent().getBooleanExtra("examinedHieroglyphs", false);
 
@@ -19,7 +26,6 @@ public class Scene2 extends AppCompatActivity {
         inspectArtifactsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Navigate to Scene3 (Secret Passage)
                 Intent intent = new Intent(Scene2.this, Scene3.class);
                 startActivity(intent);
             }
@@ -29,17 +35,23 @@ public class Scene2 extends AppCompatActivity {
         proceedToChamberButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Navigate to Scene4 (Main Chamber)
                 Intent intent = new Intent(Scene2.this, Scene4.class);
                 startActivity(intent);
             }
         });
 
         if (examinedHieroglyphs) {
-            // Show a message or change the scenario based on the examined hieroglyphs
-            // For now, we'll just navigate to Scene3 as an example
             Intent intent = new Intent(Scene2.this, Scene3.class);
             startActivity(intent);
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+            mediaPlayer = null;
         }
     }
 }

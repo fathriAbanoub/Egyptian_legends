@@ -11,7 +11,7 @@
         android:id="@+id/imageViewSarcophagus"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:src="@drawable/ancient_egyptian_mechanism"
+        android:src="@drawable/ancient_egyptian_mummy"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
