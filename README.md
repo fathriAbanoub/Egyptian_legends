@@ -10,6 +10,8 @@ Egyptian Legends is an adventure game for Android that takes you on a thrilling 
 - Multiple choices that affect the story's outcome.
 - High-quality images of ancient Egyptian artifacts, tombs, and hieroglyphs.
 - Easy-to-use interface with clear navigation.
+- Added sound effects and background music to enhance the atmosphere.
+- New story: The Haunted Baron Palace, offering a unique and scary adventure.
 
 ## Screenshots
 
@@ -32,7 +34,7 @@ Egyptian Legends is an adventure game for Android that takes you on a thrilling 
    ```sh
    git clone git@github.com\:fathriAbanoub/Egyptian_legends.git
    cd Egyptian_legends
-2. Open the Project in Android Studio:
+2. pen the Project in Android Studio:
 
 Launch Android Studio.
 Select "Open an existing Android Studio project."
@@ -50,5 +52,3 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ## Contact
 For any questions or inquiries, please contact fathriAbanoub.
-
-
