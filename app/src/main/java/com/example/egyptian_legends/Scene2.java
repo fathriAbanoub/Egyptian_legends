@@ -3,6 +3,8 @@ package com.example.egyptian_legends;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.view.View;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,11 +18,11 @@ public class Scene2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scene2);
 
+        boolean examinedHieroglyphs = getIntent().getBooleanExtra("examinedHieroglyphs", false);
+
         // Initialize and play the sound
         mediaPlayer = MediaPlayer.create(this, R.raw.chamber_scroll);
         mediaPlayer.start();
-
-        boolean examinedHieroglyphs = getIntent().getBooleanExtra("examinedHieroglyphs", false);
 
         Button inspectArtifactsButton = findViewById(R.id.buttonInspectArtifacts);
         inspectArtifactsButton.setOnClickListener(new View.OnClickListener() {
@@ -53,5 +55,22 @@ public class Scene2 extends AppCompatActivity {
             mediaPlayer.release();
             mediaPlayer = null;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        // Show a confirmation dialog
+        new AlertDialog.Builder(this)
+                .setTitle("Exit")
+                .setMessage("Are you sure you want to exit?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish(); // Close the app
+                    }
+                })
+                .setNegativeButton("No", null)
+                .setCancelable(false) // Prevent the dialog from being dismissed by pressing the back button
+                .show();
     }
 }

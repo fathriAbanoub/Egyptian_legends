@@ -96,7 +96,7 @@
             android:name=".Ending"
             android:exported="true">
         </activity>
-
+        <activity android:name=".VideoPlayerActivity" />
     </application>
 
 </manifest>

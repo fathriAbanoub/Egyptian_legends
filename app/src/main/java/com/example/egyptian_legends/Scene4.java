@@ -3,6 +3,8 @@ package com.example.egyptian_legends;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.view.View;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
@@ -46,5 +48,22 @@ public class Scene4 extends AppCompatActivity {
             mediaPlayer.release();
             mediaPlayer = null;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        // Show a confirmation dialog
+        new AlertDialog.Builder(this)
+                .setTitle("Exit")
+                .setMessage("Are you sure you want to exit?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        moveTaskToBack(true); // Move the task to the back of the history stack
+                    }
+                })
+                .setNegativeButton("No", null)
+                .setCancelable(false) // Prevent the dialog from being dismissed by pressing the back button
+                .show();
     }
 }
