@@ -7,47 +7,62 @@
     android:background="#000000"
     android:textAlignment="center">
 
-    <ImageView
-        android:id="@+id/imageViewAntechamber"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:src="@drawable/mysterious_egyptian_chamber"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <TextView
-        android:id="@+id/textViewScene2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Вы входите в тускло освещенную предкамеру, наполненную древними артефактами и фресками, изображающими жизнь фараона Эхнатона. Воздух холодный и зловещий."
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewAntechamber"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/buttonInspectArtifacts"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Осмотрите артефакты на наличие скрытых механизмов."
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@+id/textViewScene2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <ImageView
+                android:id="@+id/imageViewAntechamber"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/mysterious_egyptian_chamber"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
-        android:id="@+id/buttonProceedToChamber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Продолжите путь в главную камеру."
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@+id/buttonInspectArtifacts"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <TextView
+                android:id="@+id/textViewScene2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Вы входите в тускло освещенную предкамеру, наполненную древними артефактами и фресками, изображающими жизнь фараона Эхнатона. Воздух холодный и зловещий."
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewAntechamber"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:id="@+id/buttonInspectArtifacts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="Осмотрите артефакты на наличие скрытых механизмов."
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textViewScene2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:id="@+id/buttonProceedToChamber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Продолжите путь в главную камеру."
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/buttonInspectArtifacts"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

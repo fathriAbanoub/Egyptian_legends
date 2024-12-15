@@ -26,7 +26,7 @@ public class Scene4 extends AppCompatActivity {
         stopWallsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Scene4.this, Scene6.class);
+                Intent intent = new Intent(Scene4.this, Scene3.class);
                 startActivity(intent);
             }
         });

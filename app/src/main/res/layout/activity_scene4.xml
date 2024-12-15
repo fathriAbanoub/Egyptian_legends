@@ -7,47 +7,62 @@
     android:background="#000000"
     android:textAlignment="center">
 
-    <ImageView
-        android:id="@+id/imageViewMainChamber"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:src="@drawable/pharaohs_tomb"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <TextView
-        android:id="@+id/textViewScene4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Вы входите в величественную камеру, наполненную сокровищами и саркофагом фараона Эхнатона. Внезапно комната начинает трястись, и стены начинают сдвигаться."
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewMainChamber"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/buttonStopWalls"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Быстро ищите способ остановить сдвигающиеся стены."
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@+id/textViewScene4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <ImageView
+                android:id="@+id/imageViewMainChamber"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/pharaohs_tomb"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
-        android:id="@+id/buttonEscapeChamber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Попробуйте сбежать обратно в предкамеру."
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@+id/buttonStopWalls"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <TextView
+                android:id="@+id/textViewScene4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Вы входите в величественную камеру, наполненную сокровищами и саркофагом фараона Эхнатона. Внезапно комната начинает трястись, и стены начинают сдвигаться. Вам нужно быстро принять решение."
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewMainChamber"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:id="@+id/buttonStopWalls"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="Быстро ищите способ остановить сдвигающиеся стены, возможно, здесь есть механизм, который может помочь."
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textViewScene4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:id="@+id/buttonEscapeChamber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Попробуйте сбежать обратно в предкамеру, возможно, это единственный способ спастись."
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/buttonStopWalls"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

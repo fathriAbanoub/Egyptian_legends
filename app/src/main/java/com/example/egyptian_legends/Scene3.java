@@ -26,7 +26,7 @@ public class Scene3 extends AppCompatActivity {
         enterSecretPassageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Scene3.this, Scene5.class);
+                Intent intent = new Intent(Scene3.this, Scene6.class);
                 startActivity(intent);
             }
         });
